@@ -1,0 +1,5 @@
+# NODE_MODULES
+/node_modules
+
+# PKGS
+package-lock.json

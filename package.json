@@ -1,0 +1,23 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Web Based Chat Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon node index.js"
+  },
+  "keywords": [
+    "chat",
+    "app"
+  ],
+  "author": "Eric Zhang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
