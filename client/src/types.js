@@ -1,0 +1,6 @@
+export const UPDATED_USER_LIST = "UPDATED_USER_LIST";
+export const ONLINE_USERS = "ONLINE_USERS";
+export const UPDATED_ROOM_LIST = "UPDATED_ROOM_LIST";
+export const NEW_MESSAGE = "NEW_MESSAGE";
+export const ALL_ROOM = "ALL_ROOM";
+export const SET_CURRENT_NAME = "SET_CURRENT_NAME";

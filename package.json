@@ -4,8 +4,11 @@
   "description": "Web Based Chat Application",
   "main": "index.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node index.js",
-    "server": "nodemon node index.js"
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "chat",
@@ -14,8 +17,17 @@
   "author": "Eric Zhang",
   "license": "MIT",
   "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "socket.io": "^2.2.0"
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.5.11",
+    "socket.io": "^2.2.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
