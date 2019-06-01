@@ -130,6 +130,18 @@ let version = "1.0.0";
   // Main API Routes
   app.use("/api/user", require("./routes/api/UserRoute"));
 
+  if (process.env.NODE_ENV === "production") {
+    // server static assets if in production
+    if (process.env.NODE_ENV === "production") {
+      // set static folder
+      app.use(express.static("client/build"));
+
+      app.get("*", (req, res, next) => {
+        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+      });
+    }
+  }
+
   // Listen to server port
   http.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 })();
